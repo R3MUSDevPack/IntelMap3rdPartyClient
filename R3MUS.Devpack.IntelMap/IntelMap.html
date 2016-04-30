@@ -278,13 +278,9 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <script src="Scripts/jquery-1.10.2.min.js"></script>
-    <script src="Scripts/jquery.signalR-2.2.0.min.js"></script>
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    <script src="Scripts/dropit.js"></script>
-    <link rel="stylesheet" href="Content/dropit.css" type="text/css" />
-
+    <script src="/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Scripts/jquery.signalR-2.2.0.min.js"></script>
+    
     <script src="http://www.r3mus.org/signalr/hubs"></script>
     <script>
         var regionName, elements, svgDoc, orig, chat, messages, pageURL;
@@ -334,6 +330,9 @@
             conn.hub.url = 'http://www.r3mus.org/signalr';
             chat = $.connection.intelHub;
             messages = new Array();
+
+            alert(conn);
+            alert(chat);
             
             chat.client.pingIntel = function (message) {
                 if (!messageExists(message, messages)) {
@@ -354,7 +353,7 @@
                         }
                     }
                     catch (e) {
-                        //alert(e.message);
+                        alert(e.message);
                     }
                 }
             };
@@ -371,7 +370,7 @@
                 chat.server.sendHistory();
             });
             }catch(e){
-            //alert(e.message);
+            alert(e.message);
             }
         }
 

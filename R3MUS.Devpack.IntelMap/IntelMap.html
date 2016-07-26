@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="Content/bootstrap.css">
     <link rel="stylesheet" href="Content/site.css">
     <script>
-    
+
         function getUrlParameter(sParam) {
 	    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
 	        sURLVariables = sPageURL.split('&'),
@@ -32,244 +32,244 @@
 </head>
 <body style="color: #808080; background-color: #111111;">
     <div class="container-full body-content">
-	<div class="row">
-	    <div class="col-lg-10" style="text-align:right; left: -6vh;">
-	        <object data="" id="map" type="image/svg+xml" width="94%" height="85%"></object>
-	    </div>
-	    <div class="col-lg-2">
-            <h4><a href="http://downloads.r3mus.org/intellogger/r3mus.devpack.intellogger.application" target="_blank">Download Logger</a></h4>
-	        <h4 id='title' class="menu" onclick="ShowHideMenu()">Intel Map - Click to select a region</h4>
-            <div class="dropdown" style="position:absolute; background-color:black;display:none;">
-                <table style="border:thin;">
-                    <tr>
-                        <td class="region" style="border-style:ridge;">
-                            Aridia
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Black_Rise
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Branch
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Cache
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Catch
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="region" style="border-style:ridge;">
-                            Cloud_Ring
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Cobalt_Edge
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Curse
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Deklein
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Delve
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="region" style="border-style:ridge;">
-                            Derelik
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Detorid
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Domain
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Esoteria
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Essence
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="region" style="border-style:ridge;">
-                            Etherium_Reach
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Everyshore
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Fade
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Feythabolis
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Fountain
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="region" style="border-style:ridge;">
-                            Geminate
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Genesis
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Great_Wildlands
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Heimatar
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Immensea
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="region" style="border-style:ridge;">
-                            Impass
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Insmother
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Kador
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Khanid
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Lonetrek
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="region" style="border-style:ridge;">
-                            Malpais
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Metropolis
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Molden_Heath
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Oasa
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Omist
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="region" style="border-style:ridge;">
-                            Outer_Passage
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Outer_Ring
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Paragon_Soul
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Period_Basis
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Perrigen_Falls
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="region" style="border-style:ridge;">
-                            Placid
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Providence
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Pure_Blind
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Querious
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Scalding_Pass
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="region" style="border-style:ridge;">
-                            Sinq_Laison
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Solitude
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Stain
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Syndicate
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Tenal
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="region" style="border-style:ridge;">
-                            Tenerifis
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            The_Bleak_Lands
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            The_Citadel
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            The_Forge
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            The_Kalevala_Expanse
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="region" style="border-style:ridge;">
-                            The_Spire
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Tribute
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Vale_of_the_Silent
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Venal
-                        </td>
-                        <td class="region" style="border-style:ridge;">
-                            Verge_Vendor
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="region" style="border-style:ridge;">
-                            Wicked_Creek
-                        </td>
-                        <td>
-                            &nbsp;
-                        </td>
-                        <td>
-                            &nbsp;
-                        </td>
-                        <td>
-                            &nbsp;
-                        </td>
-                        <td>
-                            &nbsp;
-                        </td>
-                    </tr>                        
-                </table>
+        <div class="row">
+            <div class="col-lg-10" style="text-align:right; left: -6vh;">
+                <script>document.write("<object data='maps/" + mapName + ".svg' id='map' type='image/svg+xml' width='94%' height='85%'></object>")</script>
             </div>
-	        <h5>Status: <label id="status" style="color: orangered;">Connecting to Hub</label></h5>
-	        <h5>Number of Contributors Logging: <label id="loggerCount">0</label></h5>
-	        <div id="log" style="text-align: left; overflow-y: scroll; min-height: 80vh; height: 80vh; max-height: 80vh; min-width: 25vh;">
-	        </div>
-	    </div>
-	</div>
+            <div class="col-lg-2">
+                <h4><a href="http://downloads.r3mus.org/intellogger/r3mus.devpack.intellogger.application" target="_blank">Download Logger</a></h4>
+                <h4 id='title' class="menu" onclick="ShowHideMenu()">Intel Map - Click to select a region</h4>
+                <div class="dropdown" style="position:absolute; background-color:black;display:none;">
+                    <table style="border:thin;">
+                        <tr>
+                            <td class="region" style="border-style:ridge;">
+                                Aridia
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Black_Rise
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Branch
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Cache
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Catch
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="region" style="border-style:ridge;">
+                                Cloud_Ring
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Cobalt_Edge
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Curse
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Deklein
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Delve
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="region" style="border-style:ridge;">
+                                Derelik
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Detorid
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Domain
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Esoteria
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Essence
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="region" style="border-style:ridge;">
+                                Etherium_Reach
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Everyshore
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Fade
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Feythabolis
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Fountain
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="region" style="border-style:ridge;">
+                                Geminate
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Genesis
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Great_Wildlands
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Heimatar
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Immensea
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="region" style="border-style:ridge;">
+                                Impass
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Insmother
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Kador
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Khanid
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Lonetrek
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="region" style="border-style:ridge;">
+                                Malpais
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Metropolis
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Molden_Heath
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Oasa
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Omist
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="region" style="border-style:ridge;">
+                                Outer_Passage
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Outer_Ring
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Paragon_Soul
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Period_Basis
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Perrigen_Falls
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="region" style="border-style:ridge;">
+                                Placid
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Providence
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Pure_Blind
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Querious
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Scalding_Pass
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="region" style="border-style:ridge;">
+                                Sinq_Laison
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Solitude
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Stain
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Syndicate
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Tenal
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="region" style="border-style:ridge;">
+                                Tenerifis
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                The_Bleak_Lands
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                The_Citadel
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                The_Forge
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                The_Kalevala_Expanse
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="region" style="border-style:ridge;">
+                                The_Spire
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Tribute
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Vale_of_the_Silent
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Venal
+                            </td>
+                            <td class="region" style="border-style:ridge;">
+                                Verge_Vendor
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="region" style="border-style:ridge;">
+                                Wicked_Creek
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <h5>Status: <label id="status" style="color: orangered;">Connecting to Hub</label></h5>
+                <h5>Number of Contributors Logging: <label id="loggerCount">0</label></h5>
+                <div id="log" style="text-align: left; overflow-y: scroll; min-height: 80vh; height: 80vh; max-height: 80vh; min-width: 25vh;">
+                </div>
+            </div>
+        </div>
         <hr />
         <footer>
             <p>&copy; <label id="cright"></label> - Raised By Wolves Inc.</p>
@@ -280,13 +280,12 @@
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <script src="/Scripts/jquery-1.10.2.min.js"></script>
     <script src="/Scripts/jquery.signalR-2.2.0.min.js"></script>
-    
+
     <script src="http://www.r3mus.org/signalr/hubs"></script>
     <script>
         var regionName, elements, svgDoc, orig, chat, messages, pageURL;
+		var bogSystems = ['52G-NZ', '5LJ-MD', '6-O5GY', 'B8O-KJ', 'KV-8SN', 'QCWA-Z', 'UB-UQZ', 'XM-4L0', 'YG-82V', 'Z-K495', '313I-B', '4DTQ-K', 'D4R-H7', 'EQI2-2', 'J9-5MQ', 'Q-4DEC'];
         $(window).load(function () {
-
-            //$('.dropdown').hide();
 
             pageURL = window.location.protocol + '//' +  window.location.host + '/' + window.location.pathname;
 
@@ -297,15 +296,14 @@
 
 	        if(mapName != null){
 	            $('#title').text('Intel Map - ' + mapName.replace(/\_/g, ' '));
-		        $('#map').attr('data', 'maps/' + mapName + '.svg');
+		        //$('#map').attr('data', 'maps/' + mapName + '.svg');
                 try{
-                    window.setTimeout(function() {LoadSVG();}, 0);
-                    Connect();
+					LoadSVG();
                 }
 	            catch (e) {
-	                alert(e.message);
 	            }
 	        }
+			Connect();
         });
 
         function ShowHideMenu() {
@@ -323,7 +321,7 @@
                 alert(e.message);
             }
         }
-        
+
         function Connect() {
         try{
             var conn = $.connection;
@@ -331,15 +329,13 @@
             chat = $.connection.intelHub;
             messages = new Array();
 
-            alert(conn);
-            alert(chat);
-            
             chat.client.pingIntel = function (message) {
                 if (!messageExists(message, messages)) {
                     try {
                         messages.push(message);
                         $('#log').prepend('<h5>' + message.LogDateTime + '<br />' + message.UserName + '<br /><strong>' + message.Message + '</strong></h5>');
-                        var splitMsg = message.Message.split(' ');
+
+						var splitMsg = message.Message.split(' ');
 
                         $.each(splitMsg, function (index, value) {
                             if (value.replace(' ', '').length > 0) {
@@ -353,7 +349,7 @@
                         }
                     }
                     catch (e) {
-                        alert(e.message);
+                        //alert(e.message);
                     }
                 }
             };
@@ -361,16 +357,17 @@
             chat.client.pingUserCount = function (userCount) {
                 $('#loggerCount').text(userCount);
             }
-            
-                
+
+
             $.connection.hub.start().done(function () {
                 $('#status').text('Connected to Hub');
                 $('#status').attr('style', 'color: green;');
                 chat.server.sendUserCount();
-                chat.server.sendHistory();
+				window.setTimeout(function() {chat.server.sendHistory();}, 200);
+                //chat.server.sendHistory();
             });
             }catch(e){
-            alert(e.message);
+            //alert(e.message);
             }
         }
 
@@ -403,7 +400,7 @@
 	                $(elem4).attr('style', orig);
 	                $(elem3).text($(elem3).text());
 		        }
-	            catch (e) { 
+	            catch (e) {
 		        }
 	        }
         }
@@ -413,24 +410,37 @@
         }
 
         function Flash(sysName){
+			if(svgDoc == null){
+				LoadSVG();
+			}
 	        for(var i = 0; i < $(svgDoc.getElementsByTagName('symbol')).length; i++)
 	        {
 		        try{
 		            if ($(svgDoc.getElementsByTagName('symbol'))[i].getElementsByTagName('a')[0].getElementsByTagName('text')[0].textContent == sysName.replace('*', ''))
 		            {
-			            SetFlashy($(svgDoc.getElementsByTagName('symbol'))[i].getElementsByTagName('a')[0].getElementsByTagName('text')[0].previousElementSibling);
+			            SetFlashy($(svgDoc.getElementsByTagName('symbol'))[i].getElementsByTagName('a')[0].getElementsByTagName('text')[0].previousElementSibling,
+						(bogSystems.indexOf(sysName.replace('*', '')) >= 0));
 			        }
 		        }
-	            catch (e) { }
+	            catch (e) {  }
 	        }
 
         }
 
-        function SetFlashy(sys){
+        function SetFlashy(sys, isHomeSystem){
 	        counter = 0;
+			var flashyTimer;
+			if(isHomeSystem){
+				flashyTimer = 39;
+				var snd = new  Audio("data:audio/wav;base64,//uQRAAAAWMSLwUIYAAsYkXgoQwAEaYLWfkWgAI0wWs/ItAAAGDgYtAgAyN+QWaAAihwMWm4G8QQRDiMcCBcH3Cc+CDv/7xA4Tvh9Rz/y8QADBwMWgQAZG/ILNAARQ4GLTcDeIIIhxGOBAuD7hOfBB3/94gcJ3w+o5/5eIAIAAAVwWgQAVQ2ORaIQwEMAJiDg95G4nQL7mQVWI6GwRcfsZAcsKkJvxgxEjzFUgfHoSQ9Qq7KNwqHwuB13MA4a1q/DmBrHgPcmjiGoh//EwC5nGPEmS4RcfkVKOhJf+WOgoxJclFz3kgn//dBA+ya1GhurNn8zb//9NNutNuhz31f////9vt///z+IdAEAAAK4LQIAKobHItEIYCGAExBwe8jcToF9zIKrEdDYIuP2MgOWFSE34wYiR5iqQPj0JIeoVdlG4VD4XA67mAcNa1fhzA1jwHuTRxDUQ//iYBczjHiTJcIuPyKlHQkv/LHQUYkuSi57yQT//uggfZNajQ3Vmz+Zt//+mm3Wm3Q576v////+32///5/EOgAAADVghQAAAAA//uQZAUAB1WI0PZugAAAAAoQwAAAEk3nRd2qAAAAACiDgAAAAAAABCqEEQRLCgwpBGMlJkIz8jKhGvj4k6jzRnqasNKIeoh5gI7BJaC1A1AoNBjJgbyApVS4IDlZgDU5WUAxEKDNmmALHzZp0Fkz1FMTmGFl1FMEyodIavcCAUHDWrKAIA4aa2oCgILEBupZgHvAhEBcZ6joQBxS76AgccrFlczBvKLC0QI2cBoCFvfTDAo7eoOQInqDPBtvrDEZBNYN5xwNwxQRfw8ZQ5wQVLvO8OYU+mHvFLlDh05Mdg7BT6YrRPpCBznMB2r//xKJjyyOh+cImr2/4doscwD6neZjuZR4AgAABYAAAABy1xcdQtxYBYYZdifkUDgzzXaXn98Z0oi9ILU5mBjFANmRwlVJ3/6jYDAmxaiDG3/6xjQQCCKkRb/6kg/wW+kSJ5//rLobkLSiKmqP/0ikJuDaSaSf/6JiLYLEYnW/+kXg1WRVJL/9EmQ1YZIsv/6Qzwy5qk7/+tEU0nkls3/zIUMPKNX/6yZLf+kFgAfgGyLFAUwY//uQZAUABcd5UiNPVXAAAApAAAAAE0VZQKw9ISAAACgAAAAAVQIygIElVrFkBS+Jhi+EAuu+lKAkYUEIsmEAEoMeDmCETMvfSHTGkF5RWH7kz/ESHWPAq/kcCRhqBtMdokPdM7vil7RG98A2sc7zO6ZvTdM7pmOUAZTnJW+NXxqmd41dqJ6mLTXxrPpnV8avaIf5SvL7pndPvPpndJR9Kuu8fePvuiuhorgWjp7Mf/PRjxcFCPDkW31srioCExivv9lcwKEaHsf/7ow2Fl1T/9RkXgEhYElAoCLFtMArxwivDJJ+bR1HTKJdlEoTELCIqgEwVGSQ+hIm0NbK8WXcTEI0UPoa2NbG4y2K00JEWbZavJXkYaqo9CRHS55FcZTjKEk3NKoCYUnSQ0rWxrZbFKbKIhOKPZe1cJKzZSaQrIyULHDZmV5K4xySsDRKWOruanGtjLJXFEmwaIbDLX0hIPBUQPVFVkQkDoUNfSoDgQGKPekoxeGzA4DUvnn4bxzcZrtJyipKfPNy5w+9lnXwgqsiyHNeSVpemw4bWb9psYeq//uQZBoABQt4yMVxYAIAAAkQoAAAHvYpL5m6AAgAACXDAAAAD59jblTirQe9upFsmZbpMudy7Lz1X1DYsxOOSWpfPqNX2WqktK0DMvuGwlbNj44TleLPQ+Gsfb+GOWOKJoIrWb3cIMeeON6lz2umTqMXV8Mj30yWPpjoSa9ujK8SyeJP5y5mOW1D6hvLepeveEAEDo0mgCRClOEgANv3B9a6fikgUSu/DmAMATrGx7nng5p5iimPNZsfQLYB2sDLIkzRKZOHGAaUyDcpFBSLG9MCQALgAIgQs2YunOszLSAyQYPVC2YdGGeHD2dTdJk1pAHGAWDjnkcLKFymS3RQZTInzySoBwMG0QueC3gMsCEYxUqlrcxK6k1LQQcsmyYeQPdC2YfuGPASCBkcVMQQqpVJshui1tkXQJQV0OXGAZMXSOEEBRirXbVRQW7ugq7IM7rPWSZyDlM3IuNEkxzCOJ0ny2ThNkyRai1b6ev//3dzNGzNb//4uAvHT5sURcZCFcuKLhOFs8mLAAEAt4UWAAIABAAAAAB4qbHo0tIjVkUU//uQZAwABfSFz3ZqQAAAAAngwAAAE1HjMp2qAAAAACZDgAAAD5UkTE1UgZEUExqYynN1qZvqIOREEFmBcJQkwdxiFtw0qEOkGYfRDifBui9MQg4QAHAqWtAWHoCxu1Yf4VfWLPIM2mHDFsbQEVGwyqQoQcwnfHeIkNt9YnkiaS1oizycqJrx4KOQjahZxWbcZgztj2c49nKmkId44S71j0c8eV9yDK6uPRzx5X18eDvjvQ6yKo9ZSS6l//8elePK/Lf//IInrOF/FvDoADYAGBMGb7FtErm5MXMlmPAJQVgWta7Zx2go+8xJ0UiCb8LHHdftWyLJE0QIAIsI+UbXu67dZMjmgDGCGl1H+vpF4NSDckSIkk7Vd+sxEhBQMRU8j/12UIRhzSaUdQ+rQU5kGeFxm+hb1oh6pWWmv3uvmReDl0UnvtapVaIzo1jZbf/pD6ElLqSX+rUmOQNpJFa/r+sa4e/pBlAABoAAAAA3CUgShLdGIxsY7AUABPRrgCABdDuQ5GC7DqPQCgbbJUAoRSUj+NIEig0YfyWUho1VBBBA//uQZB4ABZx5zfMakeAAAAmwAAAAF5F3P0w9GtAAACfAAAAAwLhMDmAYWMgVEG1U0FIGCBgXBXAtfMH10000EEEEEECUBYln03TTTdNBDZopopYvrTTdNa325mImNg3TTPV9q3pmY0xoO6bv3r00y+IDGid/9aaaZTGMuj9mpu9Mpio1dXrr5HERTZSmqU36A3CumzN/9Robv/Xx4v9ijkSRSNLQhAWumap82WRSBUqXStV/YcS+XVLnSS+WLDroqArFkMEsAS+eWmrUzrO0oEmE40RlMZ5+ODIkAyKAGUwZ3mVKmcamcJnMW26MRPgUw6j+LkhyHGVGYjSUUKNpuJUQoOIAyDvEyG8S5yfK6dhZc0Tx1KI/gviKL6qvvFs1+bWtaz58uUNnryq6kt5RzOCkPWlVqVX2a/EEBUdU1KrXLf40GoiiFXK///qpoiDXrOgqDR38JB0bw7SoL+ZB9o1RCkQjQ2CBYZKd/+VJxZRRZlqSkKiws0WFxUyCwsKiMy7hUVFhIaCrNQsKkTIsLivwKKigsj8XYlwt/WKi2N4d//uQRCSAAjURNIHpMZBGYiaQPSYyAAABLAAAAAAAACWAAAAApUF/Mg+0aohSIRobBAsMlO//Kk4soosy1JSFRYWaLC4qZBYWFRGZdwqKiwkNBVmoWFSJkWFxX4FFRQWR+LsS4W/rFRb/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////VEFHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAU291bmRib3kuZGUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMjAwNGh0dHA6Ly93d3cuc291bmRib3kuZGUAAAAAAAAAACU=");
+				snd.play();
+			}
+			else{
+				flashyTimer = 20
+			}
 
 	        var interval = setInterval(function(){
-		        if(counter < 20)
+		        if(counter < flashyTimer)
 		        {
 			        if(($(sys)).attr('style') != 'fill: #ff0000')
 			        {

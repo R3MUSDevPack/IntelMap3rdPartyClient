@@ -1,12 +1,14 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-/* Set padding to keep content from hitting the edges */
+﻿/* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.dropdown {
+    position:absolute; 
+    background-color: #111111;
+    display:none; 
+    z-index:9000;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */

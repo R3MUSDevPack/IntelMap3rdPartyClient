@@ -1,0 +1,97 @@
+﻿/* Set padding to keep content from hitting the edges */
+.body-content {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.dropdown {
+	position: absolute;
+	background-color: #000000;
+	display: none;
+	z-index: 9000;
+}
+.hover-link {
+	cursor: pointer;
+}
+.text {
+	color: #808080;
+}
+.brand {
+	font-family: Xirod;
+}
+.small {
+	font-size: 12px;
+}
+.log {
+	text-align: left;
+	overflow-y: scroll;
+	min-height: 80vh;
+	height: 80vh;
+	max-height: 80vh;
+	min-width: 25vh;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+	max-width: 280px;
+}
+
+.map {
+	top: -18px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+	color: #b94a48;
+}
+
+.field-validation-valid {
+	display: none;
+}
+
+input.input-validation-error {
+	border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+	border: 0 none;
+}
+
+.validation-summary-errors {
+	color: #b94a48;
+}
+
+.validation-summary-valid {
+	display: none;
+}
+
+ul.listRoles {
+	width: 300px;
+	height: auto;
+	padding: 5px;
+	margin: 5px;
+	list-style-type: none;
+	border-radius: 5px;
+	min-height: 500px;
+}
+
+	ul.listRoles li {
+		padding: 5px;
+		margin: 10px;
+		background-color: #ffff99;
+		cursor: pointer;
+		border: 1px solid Black;
+		border-radius: 5px;
+	}
+
+.container-full {
+	margin: 0 auto;
+	width: 90%;
+}
+
+@font-face {
+	font-family: 'Xirod';
+	src: url('/content/fonts/xirod.ttf') format('truetype'), url('/content/fonts/xirod.woff') format('woff');
+}

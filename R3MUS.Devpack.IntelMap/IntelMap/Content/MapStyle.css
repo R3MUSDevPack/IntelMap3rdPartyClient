@@ -1,0 +1,82 @@
+﻿.map {
+    width: 1024px;
+    height: 768px;
+    stroke-width: 0px;
+    background: #111111;
+}
+
+/* jumps */
+.j	{ stroke: #808080; stroke-width: 1; }
+.jc	{ stroke: #808080; stroke-width: 1; }
+.jr	{ stroke: #800080; stroke-width: 1; }
+.jx	{ stroke: #808080; stroke-width: 3; }
+.jxc	{ stroke: #808080; stroke-width: 3; }
+.jxr	{ stroke: #800080; stroke-width: 3; }
+.jb	{ stroke: #0000FF; stroke-width: 3; fill: none; }
+
+/* external system */
+.eh	{ stroke: #00B000; stroke-width: 1; fill: #008000; }
+.el	{ stroke: #F00000; stroke-width: 1; stroke-dasharray: 8, 4; fill: #008000; }
+.e	{ stroke: #bfbfbf; stroke-width: 1; fill: #008000; }
+.exh	{ stroke: #00B000; stroke-width: 2; fill: #008000; }
+.exl	{ stroke: #F00000; stroke-width: 2; stroke-dasharray: 8, 3; fill: #008000; }
+.ex	{ stroke: #808080; stroke-width: 2; fill: #008000; }
+
+/* external system text */
+.es	{ font-size: 9px; font-family: Tahoma, Arial, Helvetica, sans-serif; fill: #000000; font-weight: bold; }
+.er	{ font-weight: bold; font-size: 7px; font-family: verdana, Arial, sans-serif; fill: #000000; }
+
+/* system */
+.sh	{ stroke: #00B000; stroke-width: 1; }
+.sl	{ stroke: #F00000; stroke-width: 1; stroke-dasharray: 8, 3; }
+.s	{ stroke: #bfbfbf; stroke-width: 1; fill: #008000; }
+.sc	{ stroke-width: 1.2; stroke-dasharray: 4, 3; }
+.sx	{ stroke-width: 2.5; }
+
+.scl	{ stroke: transparent; stroke-width: 2; fill: transparent; }
+
+/* system text */
+ .ss	{ font-family: Tahoma, Arial, Helvetica, sans-serif; font-size: 9px; fill: #000000; font-weight: bold; } 
+.st	{ font-weight: bold; font-size: 7px; font-family: verdana, Arial, sans-serif; fill: #808080; }
+.so	{ fill: #ff0000; }
+.i	{ stroke: #0080FF; stroke-width: 1; fill: none; }
+
+/* station */
+.o	{ fill: #ffffff; }
+.oc	{ fill: #0000FF; }
+.oa	{ fill: #FFDC00; }
+.og	{ fill: #00FF00; }
+.om	{ fill: #FF0000; }
+.o1	{ fill: #ffffff; stroke-width: 0.5; stroke: #808080; }
+.o2	{ fill: #ffffff; stroke-width: 0.5; stroke: #808080; }
+.oo	{ fill: none; stroke: #808080; stroke-width: 1; }
+
+/* station services */
+.v1	{ fill: #FF0000; }
+.v2	{ fill: #00FF00; }
+.v3	{ fill: #FFDC00; }
+.v4	{ fill: #0000FF; }
+
+/* legend */
+.lb	{ stroke-width: 1; stroke: #808080; fill: #ffffff; }
+.lbt	{ stroke-width: 1; stroke: #808080; fill: #ffffff; }
+.lt	{ fill: #808080; font-family: Arial, Helvetica, sans-serif; font-weight: bold; font-size: 12px; }
+.lc	{ fill: #808080; font-family: Arial, Helvetica, sans-serif; font-size: 11px; }
+.l	{ fill: #808080; font-family: Arial, Helvetica, sans-serif; font-size: 10px; }
+
+/* highlight */
+.h	{ fill: none; stroke-width: 3; stroke: #808080; }
+.hw	{ fill: none; stroke-width: 2; stroke: #00AA00; }
+.hl	{ fill: none; stroke-width: 2; stroke: #F00000; }
+.hg	{ fill: none; stroke-width: 2; stroke: #00B000; }
+
+/* incursion */
+.inc	{ fill: url(#incBg); }
+.incs	{ fill: url(#incStBg); }
+
+/* contested */
+.con	{ fill: url(#conBg); }
+
+/* sov campaign triggered */
+.cam		{ fill: url(#camBg); }
+.cam-active	{ fill: url(#camActiveBg); }

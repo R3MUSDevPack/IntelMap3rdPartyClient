@@ -25,7 +25,8 @@ namespace R3MUS.Devpack.SSO.IntelMap.Controllers
             }
 
             var viewModel = new MapFiles();
-            maps.ForEach(f => viewModel.Add(f.Key, f.Value));
+            maps.OrderBy(o => o.Key).ForEach(f => viewModel.Add(f.Key, f.Value));
+            viewModel.InitialMap = maps["Deklein"];
 
             //ViewBag.InitialMap = "Deklein";
             return View(viewModel);

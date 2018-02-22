@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model R3MUS.Devpack.SSO.IntelMap.ViewModels.MapFiles
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
@@ -20,7 +21,7 @@
 	        if (sParameterName[0] === sParam) {
 	            return sParameterName[1] === undefined ? true : sParameterName[1];
 			}
-			return '@ViewBag.InitialMap';
+			return '@Model.InitialMap';
 	    }
 	};
 

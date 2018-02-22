@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
+using R3MUS.Devpack.SSO.IntelMap.Extensions;
 using R3MUS.Devpack.SSO.IntelMap.Models;
 using System;
 using System.Threading.Tasks;
@@ -36,6 +37,7 @@ namespace R3MUS.Devpack.SSO.IntelMap.Helpers
                 UserName = toon.Name,
                 CorporationId = (long)toon.CorporationId
             };
+            siteUser.GenerateUser();
             
             if (HttpContext.Current != null)
             {

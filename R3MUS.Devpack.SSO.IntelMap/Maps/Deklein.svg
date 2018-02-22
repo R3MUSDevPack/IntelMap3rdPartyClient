@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"[]>
 <?xml-stylesheet type='text/css' href='../Content/MapStyle.css'?>
-<svg version="1.1" id="svgdoc" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="768" viewBox="0 0 1024 768" style="stroke-width: 0px; background: #000000;" onload="init(evt)">
+<svg version="1.1" id="svgdoc" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="768" viewBox="0 0 1024 768" style="stroke-width: 0px; background: #111111;" onload="init(evt)">
   <g id="map">
     <defs>
       <symbol id="def30002954">
@@ -907,24 +907,6 @@
       <line id="j-30003683-30003682" x1="748.5" y1="629.5" x2="668.5" y2="674.5" class="jc" />
       <line id="j-30003684-30003683" x1="668.5" y1="674.5" x2="628.5" y2="634.5" class="j" />
       <line id="j-30003685-30003683" x1="668.5" y1="674.5" x2="673.5" y2="719.5" class="j" />
-	  
-	  
-
-<path id="j-30002894-30002898-#0000FF" d="M 483,524 S 580,419 723,409" class="jb" style="stroke: #0000FF;" />
-<path id="j-30002900-30002908-#0000FF" d="M 758,324 S 809,292 868,304" class="jb" style="stroke: #0000FF;" />
-<path id="j-30002901-30002915-#0000FF" d="M 788,419 S 842,285 973,224" class="jb" style="stroke: #0000FF;" />
-<path id="j-30002902-30002912-#0000FF" d="M 903,439 S 768,369 718,224" class="jb" style="stroke: #0000FF;" />
-<path id="j-30002905-30002920-#0000FF" d="M 973,394 S 907,229 973,64" class="jb" style="stroke: #0000FF;" />
-<path id="j-30002906-30002926-#0000FF" d="M 973,439 S 674,539 388,404" class="jb" style="stroke: #0000FF;" />
-<path id="j-30002927-30002936-#0000FF" d="M 338,484 S 281,478 243,434" class="jb" style="stroke: #0000FF;" />
-<path id="j-30002928-30002935-#0000FF" d="M 328,554 S 218,604 103,564" class="jb" style="stroke: #0000FF;" />
-<path id="j-30002930-30002934-#0000FF" d="M 338,614 S 226,572 173,464" class="jb" style="stroke: #0000FF;" />
-<path id="j-30002931-30002939-#0000FF" d="M 243,569 S 238,383 363,244" class="jb" style="stroke: #0000FF;" />
-<path id="j-30002932-30002937-#0000FF" d="M 238,499 S 180,586 78,609" class="jb" style="stroke: #0000FF;" />
-<path id="j-30002938-30002953-#0000FF" d="M 323,299 S 193,256 128,134" class="jb" style="stroke: #0000FF;" />
-<path id="j-30002945-30002950-#0000FF" d="M 273,244 S 341,159 448,144" class="jb" style="stroke: #0000FF;" />
-<path id="j-30002946-30002956-#0000FF" d="M 323,54 S 216,170 58,179" class="jb" style="stroke: #0000FF;" />
-	  
     </g>
     <g id="sysuse">
       <use id="sys30002954" x="30" y="95" width="62.5" height="30" xlink:href="#def30002954" />

@@ -7,17 +7,22 @@ namespace R3MUS.Devpack.SSO.IntelMap.ViewModels
 {
     public class MapFiles
     {
-        public List<MapFile> RegionMaps { get; set; }
+        public List<List<MapFile>> RegionMaps { get; set; }
         public string InitialMap { get; set; }
 
         public MapFiles()
         {
-            RegionMaps = new List<MapFile>();
+            RegionMaps = new List<List<MapFile>>();
+            RegionMaps.Add(new List<MapFile>());
         }
 
         public void Add(string regionName, string path)
         {
-            RegionMaps.Add(new MapFile() { RegionName = regionName, Path = path });
+            if (!RegionMaps.Any(w => w.Count <= 5))
+            {
+                RegionMaps.Add(new List<MapFile>());
+            }
+            RegionMaps.First(w => w.Count <= 5).Add(new MapFile() { RegionName = regionName, Path = path });
         }
     }
 

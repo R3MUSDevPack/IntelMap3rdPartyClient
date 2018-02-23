@@ -2,7 +2,7 @@
 
 namespace R3MUS.Devpack.SSO.IntelMap.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class IntelController : Controller
     {
         // GET: Intel

@@ -14,26 +14,24 @@ namespace R3MUS.Devpack.SSO.IntelMap.Extensions
         public static void GenerateUser(this SSOApplicationUser self)
         {
             var group = new Group();
-            var corporation = new ESI.Models.Corporation.Detail(self.CorporationId);
-            if (corporation.Alliance_Id.HasValue)
-            {
-                self.AllianceId = corporation.Alliance_Id;
-            }
+
             using (var context = new DatabaseContext())
             {
-                if (context.GroupMemberships.Any(w => w.EntityTypeId == (int)EntityType.Corporation && w.Id == self.CorporationId))
+                if (context.GroupMemberships.Any(w => w.EntityTypeId == (int)EntityType.Corporation && w.EntityId == self.CorporationId))
                 {
-                    group = context.Groups.First(w1 =>
-                        w1.Id == context.GroupMemberships.First(w => w.EntityTypeId == (int)EntityType.Corporation && w.Id == self.CorporationId).GroupId);
+                    group.Id = context.GroupMemberships.First(w => w.EntityTypeId == (int)EntityType.Corporation
+                        && w.EntityId == self.CorporationId).GroupId;
                 }
-                else if (self.AllianceId.HasValue && context.GroupMemberships.Any(w => w.EntityTypeId == (int)EntityType.Alliance && w.Id == self.AllianceId))
+                else if (self.AllianceId.HasValue && context.GroupMemberships.Any(w => w.EntityTypeId == (int)EntityType.Alliance && w.EntityId == self.AllianceId))
                 {
-                    group = context.Groups.First(w1 =>
-                        w1.Id == context.GroupMemberships.First(w => w.EntityTypeId == (int)EntityType.Alliance && w.Id == self.AllianceId).GroupId);
+                    group.Id = context.GroupMemberships.First(w => w.EntityTypeId == (int)EntityType.Alliance
+                        && w.EntityId == self.AllianceId).GroupId;
                 }
+                group = context.Groups.First(w => w.Id == group.Id && !w.Disabled);
             }
-            self.GroupId = (int)group.Id;
+            self.GroupId = group.Id;
             self.GroupName = group.Name;
+            self.DefaultRegion = group.DefaultRegion;
         }
     }
 }

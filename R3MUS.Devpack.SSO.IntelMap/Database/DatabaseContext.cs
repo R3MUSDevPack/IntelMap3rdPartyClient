@@ -1,4 +1,6 @@
-﻿using R3MUS.Devpack.SSO.IntelMap.Entities;
+﻿using R3MUS.Devpack.SSO.IntelMap.Database.EFConfiguration;
+using R3MUS.Devpack.SSO.IntelMap.Entities;
+using R3MUS.Devpack.SSO.IntelMap.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -14,6 +16,10 @@ namespace R3MUS.Devpack.SSO.IntelMap.Database
         public DbSet<Alliance> Alliances { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<GroupMembership> GroupMemberships { get; set; }
+        public DbSet<LogLine> LogLines { get; set; }
+        public DbSet<Channel> Channels { get; set; }
+        public DbSet<SystemGroup> SystemGroups { get; set; }
+        public DbSet<Beep> Beeps { get; set; }
 
         public DatabaseContext() : base("name=IntelDBConnection")
         {
@@ -21,7 +27,11 @@ namespace R3MUS.Devpack.SSO.IntelMap.Database
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            throw new UnintentionalCodeFirstException();
+            modelBuilder.Configurations.Add(new LogLineConfiguration());
+            modelBuilder.Configurations.Add(new ChannelConfiguration());
+            modelBuilder.Configurations.Add(new GroupConfiguration());
+            modelBuilder.Configurations.Add(new BeepConfiguration());
+            modelBuilder.Configurations.Add(new SystemGroupConfiguration());
         }
     }
 }

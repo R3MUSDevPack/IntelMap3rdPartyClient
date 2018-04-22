@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
+using Ninject;
+using R3MUS.Devpack.SSO.IntelMap.App_Start;
 using R3MUS.Devpack.SSO.IntelMap.Extensions;
 using R3MUS.Devpack.SSO.IntelMap.Models;
+using R3MUS.Devpack.SSO.IntelMap.Services;
 using System;
 using System.Threading.Tasks;
 using System.Web;
@@ -11,6 +14,9 @@ namespace R3MUS.Devpack.SSO.IntelMap.Helpers
 {
     public class SSOUserManager : UserManager<SSOApplicationUser>
     {
+        [Inject]
+        public ISSOUserService SSOUserService { get; set; }
+
         public static SSOApplicationUser SiteUser
         {
             get { return (SSOApplicationUser)HttpContext.Current.Session["SiteUser"]; }
@@ -20,24 +26,17 @@ namespace R3MUS.Devpack.SSO.IntelMap.Helpers
         public SSOUserManager(DummyUserStore<SSOApplicationUser> store)
             : base(store)
         {
+            Startup.Container.Inject(this);
         }
 
-        public static SSOUserManager Create(IdentityFactoryOptions<SSOUserManager> options, IOwinContext context)
+        public static SSOUserManager Create()
         {
             return new SSOUserManager(new DummyUserStore<SSOApplicationUser>());
         }
-
+        
         public override Task<SSOApplicationUser> FindByIdAsync(string userId)
         {
-            var toon = new ESI.Models.Character.Detail(Convert.ToInt64(userId));
-
-            var siteUser = new SSOApplicationUser()
-            {
-                Id = userId,
-                UserName = toon.Name,
-                CorporationId = (long)toon.CorporationId
-            };
-            siteUser.GenerateUser();
+            var siteUser = SSOUserService.CreateUser(userId);
             
             if (HttpContext.Current != null)
             {

@@ -7,5 +7,6 @@ namespace R3MUS.Devpack.SSO.IntelMap.Entities
 {
     public class Group: Entity
     {
+        public string DefaultRegion { get; set; }
     }
 }

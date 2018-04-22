@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R3MUS.Devpack.IntelMap", "R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R3MUS.Devpack.SSO.IntelMap", "R3MUS.Devpack.SSO.IntelMap\R3MUS.Devpack.SSO.IntelMap.csproj", "{CCAC8C90-5A86-43F3-99B3-DEA7F8442100}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R3MUS.Devpack.SSO.IntelMap.Models", "R3MUS.Devpack.SSO.IntelMap.Models\R3MUS.Devpack.SSO.IntelMap.Models.csproj", "{381091C7-6950-461B-B0F0-B21F0855A040}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CCAC8C90-5A86-43F3-99B3-DEA7F8442100}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCAC8C90-5A86-43F3-99B3-DEA7F8442100}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCAC8C90-5A86-43F3-99B3-DEA7F8442100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{381091C7-6950-461B-B0F0-B21F0855A040}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{381091C7-6950-461B-B0F0-B21F0855A040}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{381091C7-6950-461B-B0F0-B21F0855A040}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{381091C7-6950-461B-B0F0-B21F0855A040}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

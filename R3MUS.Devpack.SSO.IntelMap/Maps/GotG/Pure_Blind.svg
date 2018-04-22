@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"[]>
-<?xml-stylesheet type='text/css' href='../Content/MapStyle.css'?>
+<?xml-stylesheet type='text/css' href='/Content/MapStyle.css'?>
 <svg version="1.1" id="svgdoc" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="768" viewBox="0 0 1024 768" style="stroke-width: 0px; background: #000000;" onload="init(evt)">
   <g id="map">
     <defs>
@@ -955,6 +955,11 @@
       <line id="j-30003681-30003679" x1="418.5" y1="54.5" x2="418.5" y2="19.5" class="j" />
       <line id="j-30003681-30003680" x1="333.5" y1="19.5" x2="418.5" y2="19.5" class="j" />
       <line id="j-30003686-30003684" x1="148.5" y1="39.5" x2="73.5" y2="89.5" class="j" />
+	    
+<path id="j-30001970-30002013-#0000FF" d="M 873,194 S 711,303 518,269" class="jb" style="stroke: #0000FF;" />
+<path id="j-30001987-30001997-#0000FF" d="M 723,594 S 617,306 738,24" class="jb" style="stroke: #0000FF;" />
+<path id="j-30002011-30003681-#0000FF" d="M 583,314 S 442,200 418,19" class="jb" style="stroke: #0000FF;" />
+
    </g>
     <g id="sysuse">
       <use id="sys30002032" x="0" y="300" width="62.5" height="30" xlink:href="#def30002032" />

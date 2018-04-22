@@ -1,0 +1,91 @@
+﻿
+@{
+	Layout = null;
+	ViewBag.Title = "About the Intel Map";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+	<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+	<link href="~/Content/site.css" rel="stylesheet" />
+	<script src="~/Scripts/SiteScripts.js"></script>
+</head>
+<body style="background-color: #000000" class="text">
+	<div class="container-full body-content">
+		<div class="row">
+			<div class="col-md-4">
+				<span class="brand large">
+					@ViewBag.Title
+				</span>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<p>
+					<span class="brand medium">
+						Introduction
+					</span>
+					<br />
+					A few years ago, my then corp was a member of HERO coalition, led by Brave Newbies. Brave had this fantastic tool that was widely used in Catch that I've spent some serious time reverse engineering &amp; reimplementing, for 2 reasons:
+					<ul>
+						<li>I always thought it was something that would be of benefit to any group I was part of, &amp; I Like to help my buddies.</li>
+						<li>I'm a complete geek &amp; wanted to know I could do it.</li>
+					</ul>
+					So, this is what the intel map system is. A Dotlan-style representation of every region of New Eden with system bubbles that flash when someone is reported, coupled with a logging application that passes the data to the map.
+				</p>
+			</div>
+			<div class="col-md-4">
+				<p>
+					<span class="brand medium">
+						The Logger
+					</span>
+					<br />
+					The logger is a console application, which is about the most basic way to write software. 
+					It reads the chat logs for the groups intel channels (telling you which one(s) it's using) &amp; broadcasts any new info to the server. 
+					The information being sent is displayed in the console, as is the chat channel name, so you will always know what the logger is doing. 
+					<br />
+						<img style="width: 100%;" src="~/Content/logger.PNG" />
+					<br />
+					The logger software will sometimes be updated, in which case when you next start your installation of it the new version will download &amp; ask you to install. 
+					To install it, click where it says "Intel Map -" at the top left of the map screen. A drop-down menu will appear listing all regions of New Eden, followed by the download link.
+					<br />
+					<img style="width: 80%;" src="~/Content/clicky.PNG" />
+					<br />
+					Please ignore any warnings that come up: apparently Microsoft doesn't fully trust it's own technology. 
+				</p>
+			</div>
+			<div class="col-md-4">
+				<p>
+					<span class="brand medium">
+						The Map
+					</span>
+					<br />
+					As stated before, the map is a Dotlan-style representation of every region of New Eden with system bubbles that flash when someone is reported there. 
+					<br />
+					<img src="~/Content/mapflashy.PNG" />
+					<br />
+					The received information is displayed at the right of the map, so users can see the name(s), shiptypes &amp; DScan.me links. 
+					<br />
+					<img style="width: 200px;" src="~/Content/info.PNG" />
+					<br />
+					Every region in New Eden is covered this way: to switch regions just click where it says "Intel Map -" at the top left of the map screen. 
+					<br />
+					<img style="width: 80%;" src="~/Content/clicky.PNG" />
+					<br />
+					A drop-down menu will appear, just click the name of the region you want to view. If any neutrals or reds are reported in your intel channels in that region then the relevant system should flash. 
+					<br /> 
+					Some systems reports will cause a "Beep", "Boop", or "Bong" sound. This just just because the systems were identified as being important &amp; needing the audible alert.
+					<br />
+					Reports for a system containing "clear" or "clr" will not cause a flashy. This is because we figured it would be daft to alert users to the fact no-one was there. 
+					<br />
+					Reports for a system containing "test" <strong>will</strong> cause a flashy. This is because of TEST alliance, so please don't test anything!. 
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -9,8 +9,9 @@ namespace R3MUS.Devpack.SSO.IntelMap.Models
         public string AuthToken { get; set; }
         public long CorporationId { get; set; }
         public long? AllianceId { get; set; }
-        public int GroupId { get; set; }
+        public long GroupId { get; set; }
         public string GroupName { get; set; }
+        public string DefaultRegion { get; set; }
 
         public IIdentity Identity { get; private set; }
 

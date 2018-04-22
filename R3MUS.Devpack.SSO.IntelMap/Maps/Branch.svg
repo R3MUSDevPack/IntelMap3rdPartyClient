@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"[]>
 <?xml-stylesheet type='text/css' href='../Content/MapStyle.css'?>
-<svg version="1.1" id="svgdoc" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="768" viewBox="0 0 1024 768" style="stroke-width: 0px; background: #111111;" onload="init(evt)">
+<svg version="1.1" id="svgdoc" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="768" viewBox="0 0 1024 768" style="stroke-width: 0px; background: #000000;" onload="init(evt)">
   <g id="map">
     <defs>
       <symbol id="def30004382">
@@ -969,7 +969,8 @@
       <line id="j-30004401-30004400" x1="563.5" y1="629.5" x2="488.5" y2="629.5" class="j" />
       <line id="j-30004402-30004400" x1="563.5" y1="629.5" x2="633.5" y2="629.5" class="j" />
       <line id="j-30004401-30003669" x1="488.5" y1="629.5" x2="488.5" y2="689.5" class="jr" />
-    </g>
+  
+  </g>
     <g id="sysuse">
       <use id="sys30004382" x="5" y="310" width="62.5" height="30" xlink:href="#def30004382" />
       <use id="sys30004387" x="10" y="30" width="62.5" height="30" xlink:href="#def30004387" />

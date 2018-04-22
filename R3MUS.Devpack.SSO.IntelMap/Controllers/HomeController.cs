@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using R3MUS.Devpack.SSO.IntelMap.Helpers;
+using R3MUS.Devpack.SSO.IntelMap.Services;
 using System;
 using System.Linq;
 using System.Web;
@@ -10,11 +11,11 @@ namespace R3MUS.Devpack.SSO.IntelMap.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly EveAuthenticationService _authenticationService;
+        private readonly IEveAuthenticationService _authenticationService;
 
-        public HomeController()
+        public HomeController(IEveAuthenticationService authenticationService)
         {
-            _authenticationService = new EveAuthenticationService();
+            _authenticationService = authenticationService;
         }
 
         public ActionResult Index()
@@ -38,6 +39,8 @@ namespace R3MUS.Devpack.SSO.IntelMap.Controllers
 
                 var ident = _authenticationService.GenerateIdentity(authToken);
                 userManager.FindByIdAsync(ident.GetUserId());
+                ident.AddClaim(new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.GroupSid,
+                    SSOUserManager.SiteUser.GroupName));
 
                 authManager.SignOut(DefaultAuthenticationTypes.ExternalCookie);
                 authManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
@@ -53,6 +56,5 @@ namespace R3MUS.Devpack.SSO.IntelMap.Controllers
                 return RedirectToAction("SSOLogin");
             }
         }
-
     }
 }

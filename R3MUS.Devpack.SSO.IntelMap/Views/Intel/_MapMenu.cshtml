@@ -1,0 +1,35 @@
+﻿@model R3MUS.Devpack.SSO.IntelMap.ViewModels.MapFiles
+<div class="body-content" onclick="ShowHideMenu()">
+	<table>
+		<tr>
+			<td style="padding-right:2px;">
+				<span id='title' class="menu brand small hover-link">Intel Map - </span>
+				<span id="regionName">Click to select a region</span>
+			</td>
+			<td style="padding-left:2px;">
+				<span><i id="arrow" class="arrow down hover-link"></i></span>
+			</td>
+		</tr>
+	</table>
+	<div class="dropdown">
+		<table style="border:thin;">
+			@foreach (var row in Model.RegionMaps)
+			{
+				<tr>
+					@foreach (var item in row)
+					{
+						<td class="region" style="border-style:ridge;">
+							<a href='@string.Concat(Request.Url.LocalPath, "?map=", item.Path)'>@item.RegionName.Replace("_", " ")</a>
+						</td>
+						if (row == Model.RegionMaps.Last() && item == row.Last())
+						{
+							<td style="border-style:ridge; text-align:center;" colspan="4">
+								<h4><a class="brand small" href="http://downloads.r3mus.space/intellogger/r3mus.devpack.intellogger.application" target="_blank">Download Logger</a></h4>
+							</td>
+						}
+					}
+				</tr>
+			}
+		</table>
+	</div>
+</div>

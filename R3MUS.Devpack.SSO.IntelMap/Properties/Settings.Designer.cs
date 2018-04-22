@@ -25,7 +25,7 @@ namespace R3MUS.Devpack.SSO.IntelMap.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:12958/Home/SSOReturn")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string SSORedirectURI {
             get {
                 return ((string)(this["SSORedirectURI"]));
@@ -34,16 +34,7 @@ namespace R3MUS.Devpack.SSO.IntelMap.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("72523f3e90b24b1e8cf0956bc24bb70b")]
-        public string SSOClientId {
-            get {
-                return ((string)(this["SSOClientId"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("yhqz97dbWWqRDNgt6LZoWncXIZK8ts1xSkM5hQkO")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string SSOAppKey {
             get {
                 return ((string)(this["SSOAppKey"]));
@@ -52,23 +43,10 @@ namespace R3MUS.Devpack.SSO.IntelMap.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
-            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
-            "tring>99002938</string>\r\n</ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection AuthorisedAllianceIds {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SSOClientId {
             get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["AuthorisedAllianceIds"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
-            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
-            "tring>98389365</string>\r\n  <string>98389368</string>\r\n</ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection AuthorisedCorpIds {
-            get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["AuthorisedCorpIds"]));
+                return ((string)(this["SSOClientId"]));
             }
         }
     }

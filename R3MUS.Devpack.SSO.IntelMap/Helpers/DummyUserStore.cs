@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using R3MUS.Devpack.SSO.IntelMap.Models;
+using R3MUS.Devpack.SSO.IntelMap.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,14 +9,10 @@ using System.Threading.Tasks;
 
 namespace R3MUS.Devpack.SSO.IntelMap.Helpers
 {
-    public class DummyUserStore<T> : IUserStore<T>,
-        IUserRoleStore<T> where T : SSOApplicationUser
+    public class DummyUserStore<T> : IUserStore<T>, IUserRoleStore<T> where T : SSOApplicationUser
     {
-        private readonly EveAuthenticationService _authService;
-
         public DummyUserStore()
         {
-            _authService = new EveAuthenticationService();
         }
 
         public Task AddToRoleAsync(T user, string roleName)

@@ -8,9 +8,9 @@ using System.Security.Claims;
 using System.Web;
 using System.Web.Mvc;
 
-namespace R3MUS.Devpack.SSO.IntelMap
+namespace R3MUS.Devpack.SSO.IntelMap.Services
 {
-    public class EveAuthenticationService
+    public class EveAuthenticationService : IEveAuthenticationService
     {
         public ActionResult SSOLogin()
         {
@@ -20,8 +20,8 @@ namespace R3MUS.Devpack.SSO.IntelMap
 
         public string GetAuthToken(Uri requestUri)
         {
-            return SingleSignOn.GetRefreshToken(Properties.Settings.Default.SSOClientId,
-                Properties.Settings.Default.SSOAppKey, SingleSignOn.GetAuthorisationCode(requestUri));
+            return SingleSignOn.GetTokensFromAuthenticationToken(Properties.Settings.Default.SSOClientId,
+                Properties.Settings.Default.SSOAppKey, SingleSignOn.GetAuthorisationCode(requestUri)).AccessToken;
         }
 
         public ClaimsIdentity GenerateIdentity(string authToken)
@@ -32,17 +32,11 @@ namespace R3MUS.Devpack.SSO.IntelMap
             using(var context = new DatabaseContext())
             {
                 if (!context.Corporations.Any(s => s.Id == corp.Id) 
-                    && (!corp.Alliance_Id.HasValue || !context.Alliances.Any(s => s.Id == corp.Alliance_Id)))
+                    && (!corp.AllianceId.HasValue || !context.Alliances.Any(s => s.Id == corp.AllianceId)))
                 {
                     return null;
                 }
             }
-
-            //if (!Properties.Settings.Default.AuthorisedCorpIds.Contains(corp.Id.ToString())
-            //    && (!corp.Alliance_Id.HasValue || !Properties.Settings.Default.AuthorisedAllianceIds.Contains(corp.Alliance_Id.ToString())))
-            //{
-            //    return null;
-            //}
 
             var identity = new ClaimsIdentity(DefaultAuthenticationTypes.ApplicationCookie);
             identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, toon.Id.ToString()));

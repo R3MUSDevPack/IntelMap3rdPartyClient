@@ -20,6 +20,7 @@ namespace R3MUS.Devpack.SSO.IntelMap.Database
         public DbSet<Channel> Channels { get; set; }
         public DbSet<SystemGroup> SystemGroups { get; set; }
         public DbSet<Beep> Beeps { get; set; }
+        public DbSet<ESIEndpoint> ESIEndpoints { get; set; }
 
         public DatabaseContext() : base("name=IntelDBConnection")
         {
@@ -32,6 +33,7 @@ namespace R3MUS.Devpack.SSO.IntelMap.Database
             modelBuilder.Configurations.Add(new GroupConfiguration());
             modelBuilder.Configurations.Add(new BeepConfiguration());
             modelBuilder.Configurations.Add(new SystemGroupConfiguration());
+            modelBuilder.Configurations.Add(new ESIEndpointConfiguration());
         }
     }
 }

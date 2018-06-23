@@ -61,7 +61,7 @@ namespace R3MUS.Devpack.SSO.IntelMap.Hubs
                 Group = f.Name,
                 Channels = _databaseContext.Channels.Where(w => w.GroupId == f.Id).Select(s => s.Name).ToList()
             }));
-            Clients.Client(connectionId).fuckOff();
+            //Clients.Client(connectionId).fuckOff();
             Clients.Client(connectionId).sendLogFileNames(result);
         }
 

@@ -13,6 +13,12 @@ namespace R3MUS.Devpack.SSO.IntelMap
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //routes.MapRoute(
+            //    name: "Gank-Intel",
+            //    url: "gankintel",
+            //    defaults: new { controller = "Home", action = "GankIntel", id = UrlParameter.Optional }
+            //);
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

@@ -236,11 +236,15 @@
     <Compile Include="Controllers\HelpController.cs" />
     <Compile Include="Database\EFConfiguration\BeepConfiguration.cs" />
     <Compile Include="Database\EFConfiguration\ChannelConfiguration.cs" />
+    <Compile Include="Database\EFConfiguration\ESIEndpointConfiguration.cs" />
     <Compile Include="Database\EFConfiguration\GroupConfiguration.cs" />
     <Compile Include="Database\EFConfiguration\LogLineConfiguration.cs" />
     <Compile Include="Database\EFConfiguration\SystemGroupConfiguration.cs" />
+    <Compile Include="Database\Repositories\ESIEndpointRepository.cs" />
+    <Compile Include="Database\Repositories\IESIEndpointRepository.cs" />
     <Compile Include="Entities\Beep.cs" />
     <Compile Include="Entities\Channel.cs" />
+    <Compile Include="Entities\ESIEndpoint.cs" />
     <Compile Include="Entities\SystemGroup.cs" />
     <Compile Include="Extensions\LogDataModelExtensions.cs" />
     <Compile Include="Helpers\NinjectResolver.cs" />
